@@ -33,7 +33,7 @@ body { padding-top: 0 !important; margin-top: 0 !important; }
 html { font-size: 15px; }
 
 /* home icon on vault one title */
-.page-title a::before { content: ""; display: inline-block; width: 0.85em; height: 0.85em; margin-right: 0.4rem; vertical-align: middle; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230fb6d6'%3E%3Cpath d='M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'/%3E%3C/svg%3E"); background-size: contain; background-repeat: no-repeat; }
+.page-title a::after { content: ""; display: inline-block; width: 0.85em; height: 0.85em; margin-left: 0.4rem; vertical-align: middle; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230fb6d6'%3E%3Cpath d='M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'/%3E%3C/svg%3E"); background-size: contain; background-repeat: no-repeat; }
 
 /* vault one subtitle */
 .page-title::after { content: "Obsidian notes"; display: block; font-size: 0.78rem; font-weight: 400; color: var(--darkgray); opacity: 0.85; margin-top: 0.15rem; }
