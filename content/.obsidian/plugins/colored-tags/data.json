@@ -1,0 +1,40 @@
+{
+  "palette": {
+    "seed": 4,
+    "selected": "custom",
+    "custom": "eddcd2-fff1e6-fde2e4-fad2e1-c5dedd-dbe7e4-f0efeb-d6e2e9-bcd4e6-99c1de"
+  },
+  "mixColors": true,
+  "transition": true,
+  "accessibility": {
+    "highTextContrast": false
+  },
+  "knownTags": {
+    "acordos": 6,
+    "automação": 7,
+    "custom_override": 1,
+    "ecommerce": 8,
+    "email": 9,
+    "etiqueta": 10,
+    "ferramenta": 11,
+    "impostos": 12,
+    "monitoramento": 13,
+    "paliativo": 14,
+    "paliativos": 2,
+    "pdv": 15,
+    "pedidos": 16,
+    "pricing": 17,
+    "projects": 3,
+    "projeto": 18,
+    "reapply": 4,
+    "recebimento": 19,
+    "reforma-tributaria": 20,
+    "selos": 21,
+    "tae": 22,
+    "tools": 5,
+    "whatsapp": 23,
+    "xml": 24
+  },
+  "tagColors": {},
+  "_version": 4
+}

@@ -1,0 +1,9 @@
+{
+  "flowershowToken": "fs_pat_BLvz-bwIWO3l2FNWgOlYcwQo9bX1djNh3__w0QHHi_s",
+  "siteName": "gln-digitalgarden",
+  "rootDir": "",
+  "excludePatterns": [
+    "\\.excalidraw(\\.(md|excalidraw))?$"
+  ],
+  "lastSeenVersion": ""
+}

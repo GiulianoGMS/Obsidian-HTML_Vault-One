@@ -1,0 +1,52 @@
+{
+  "cascadeColors": true,
+  "colorBackground": true,
+  "palette": [
+    {
+      "id": "JhY4_J2cvU-mpXlv8pQjc",
+      "name": "Green",
+      "value": "#5dea8e"
+    },
+    {
+      "id": "AHD_V0xFDHjtJIcDNNhXF",
+      "name": "Red",
+      "value": "#e86868"
+    },
+    {
+      "id": "O7_wEcz96ccT3lRVxcpGc",
+      "name": "Blue",
+      "value": "#7a77fd"
+    },
+    {
+      "id": "RJ0WsWFBa2DiHc9Hpl4zJ",
+      "name": "Orange",
+      "value": "#f8e791"
+    }
+  ],
+  "fileColors": [
+    {
+      "path": "70-Projects, Tools & Integrations",
+      "color": "JhY4_J2cvU-mpXlv8pQjc"
+    },
+    {
+      "path": "10-Repos/SQL.md",
+      "color": "O7_wEcz96ccT3lRVxcpGc"
+    },
+    {
+      "path": "10-Repos",
+      "color": "O7_wEcz96ccT3lRVxcpGc"
+    },
+    {
+      "path": "80-Paliativos - Nao precisa Reaplicar",
+      "color": "O7_wEcz96ccT3lRVxcpGc"
+    },
+    {
+      "path": "90-Custom Override",
+      "color": "AHD_V0xFDHjtJIcDNNhXF"
+    },
+    {
+      "path": "90-Custom Override/On",
+      "color": "RJ0WsWFBa2DiHc9Hpl4zJ"
+    }
+  ]
+}

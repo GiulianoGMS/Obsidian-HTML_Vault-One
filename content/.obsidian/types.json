@@ -1,0 +1,13 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "Date": "date",
+    "Squads": "multitext",
+    "System": "multitext",
+    "Repository": "multitext",
+    "Language": "multitext",
+    "Type": "text"
+  }
+}

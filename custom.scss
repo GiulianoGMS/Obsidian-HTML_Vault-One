@@ -1,0 +1,71 @@
+footer { display: none !important; }
+article p { line-height: 1.85; margin-bottom: 0.85rem; }
+article li { line-height: 1.85; }
+:root { --content-width: 900px; --sidebar-width: 280px; --full-page-width: 100vw; }
+.page { max-width: 100vw !important; padding: 0 !important; margin: 0 !important; }
+.page > #quartz-body { column-gap: 2rem; padding: 0 1rem 0 1rem; width: 100%; max-width: 100%; }
+#quartz-body > .right { margin-right: 3rem !important; }
+
+/* right panel spacing */
+.right.sidebar,
+.sidebar.right,
+#quartz-body > .right { padding-right: 1rem !important; padding-left: 0.5rem !important; overflow: hidden !important; }
+
+/* graph constrained to sidebar */
+.graph { width: 100% !important; max-width: 100% !important; }
+.graph > #graph-container { width: 100% !important; max-width: 100% !important; margin-right: 0 !important; }
+
+/* reduce top margin */
+.page-header { padding-top: 0 !important; margin-top: 0 !important; }
+#quartz-body { padding-top: 0 !important; margin-top: 0 !important; }
+body { padding-top: 0 !important; margin-top: 0 !important; }
+.page > .page-header { padding: 0.5rem 1rem !important; }
+.page { padding-top: 1.25rem !important; }
+.left.sidebar, #quartz-body > .left { padding-top: 0.75rem !important; margin-top: 0 !important; border-top: none !important; }
+.right.sidebar, #quartz-body > .right { padding-top: 0.75rem !important; margin-top: 0 !important; border-top: none !important; }
+.sidebar { border-top: none !important; }
+
+/* graph height in sidebar */
+#graph-container { height: 700px !important; min-height: 700px !important; }
+#graph-container canvas { height: 700px !important; }
+
+/* base font size matching Obsidian */
+html { font-size: 15px; }
+
+/* vault one subtitle */
+.page-title::after { content: "Obsidian notes"; display: block; font-size: 0.78rem; font-weight: 400; color: var(--gray); opacity: 0.75; margin-top: 0.15rem; }
+
+/* github back link */
+a.github-back-link { display: flex; align-items: center; gap: 0.65rem; color: var(--secondary); font-size: 0.78rem; font-weight: 500; text-decoration: none; padding: 0.3rem 0; margin-bottom: 0.4rem; opacity: 0.9; transition: opacity 0.15s, color 0.15s; }
+a.github-back-link:hover { opacity: 1; color: var(--tertiary); }
+
+/* properties block */
+.properties-block { margin-bottom: 1.5rem; }
+.properties-title { display: none; }
+.properties-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.properties-table tr { border-bottom: 1px solid rgba(255,255,255,0.04); }
+.properties-table tr:last-child { border-bottom: none; }
+.prop-key { color: var(--gray); font-weight: 500; padding: 0.3rem 0.75rem 0.3rem 0; white-space: nowrap; width: 28%; vertical-align: top; }
+.prop-value { color: var(--darkgray); padding: 0.3rem 0; }
+
+/* brighten code blocks - filter preserves syntax colors proportionally */
+pre.shiki { filter: brightness(1.5); }
+
+/* toc spacing */
+.toc { margin-top: 2rem !important; }
+
+/* scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2a2840; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #3a3750; }
+
+/* explorer file items - dim by default, highlight on hover */
+.explorer li > a { color: #3a3750 !important; transition: color 0.15s !important; }
+.explorer li > a:hover { color: var(--secondary) !important; }
+
+/* explorer item spacing */
+.explorer .folder-outer > li { margin-bottom: 6px !important; }
+.explorer li .folder-title { padding: 4px 0 !important; }
+.explorer li > a { padding: 4px 0 !important; line-height: 1.6 !important; }
+.explorer ul li { line-height: 1.6 !important; }

@@ -1,0 +1,40 @@
+{
+	"nodes":[
+		{"id":"8c7bdc24db0f9615","type":"text","text":"Script de automação de alerta/reports via Whatsapp para monitoramento de rotinas internas como Jobs/Schedules automáticos, Cargas, monitoramento de PDV e outros.\n","x":-82,"y":-640,"width":302,"height":140},
+		{"id":"bd8729165d3bc146","type":"text","text":"Retorno de execução de comandos [NAGP_WTS_V2_RETURN_CM](https://github.com/GiulianoGMS/Oracle_Auto_Reports/blob/main/NAGP_WTS_V2_RETURN_CM.prc)","x":-82,"y":-160,"width":302,"height":60},
+		{"id":"d4fc5637195a12c7","type":"text","text":"Procedures com determinados alertas de monitoramento salvas no [Git](https://github.com/GiulianoGMS/Oracle_Auto_Reports)","x":-380,"y":-80,"width":540,"height":60},
+		{"id":"524d1c93c03c6515","type":"text","text":"Alertas [[BI]]","x":-440,"y":0,"width":220,"height":60},
+		{"id":"6d1112c091927009","type":"text","text":"Monitoramento de Vendas [[PDV]] e [[BI]]","x":-200,"y":0,"width":420,"height":60},
+		{"id":"becee957fb1128a1","type":"text","text":"Monitoramento de Erros, Falhas e Carga [[PDV]] ([[MonitorPDV]])","x":-200,"y":80,"width":420,"height":60},
+		{"id":"6680ee91cd295eba","type":"text","text":"Controle de Carga [[PDV]] ([[MonitorPDV]])","x":-440,"y":80,"width":220,"height":60},
+		{"id":"bed1c2d20daee960","type":"text","text":"Objetos Inválidos","x":-440,"y":160,"width":220,"height":60},
+		{"id":"ca342738fb5c3fe5","type":"text","text":"Monitoramento de rotina de acompanhamento de visões do [[BI]]","x":-200,"y":160,"width":420,"height":60},
+		{"id":"6203eaadaee3aaa2","type":"text","text":"Log de execução de Jobs/Schedules","x":-440,"y":240,"width":220,"height":60},
+		{"id":"5b99613dc5237e57","type":"text","text":"Monitoramento de [[Locks]] no Banco de Dados [[PLSQL-Oracle]]","x":-200,"y":240,"width":420,"height":60},
+		{"id":"de26aade025b0a4e","type":"file","file":"Whatsapp Bot Form.md","x":-440,"y":-640,"width":330,"height":540,"color":"4"},
+		{"id":"8abcda0510423245","type":"text","text":"Nota: Para enviar mensagem à grupos é preciso descobrir o [[Group ID]]. Como obter:\n\n** 1.: Obter o código/link de convite do grupo do Whatsapp, exemplo: **\n\n\tBa4nLE21m5GI3lNZVn9RWe\n **2.: Abrir a URL no navegador: **\n \n\thttp://api.textmebot.com/send.php?group_info=Ba4nLE21m5GI3lNZVn9RWe&text=teste&apikey=API_KEY\n**3.: A resposta da página irá mostrar algo assim:**\n\n\tResult: Success!\n\tGroup ID: 120363425596383592@g.us << Informação necessária\n\tSubject: Nome do grupo\n4.: Na NAGT_API_CALL_NUMBERS insere na coluna GROUP_ID. As procedures precisam passam a utilizar o GROUP_ID ao invés do NROTELEFONE","x":-440,"y":320,"width":660,"height":500},
+		{"id":"7f00f76aa0b600f9","type":"text","text":"Execução de comandos: [NAGP_EXEC_COMMAND_WTS](https://github.com/GiulianoGMS/Oracle_Auto_Reports/blob/main/NAGP_EXEC_COMMAND_WTS.prc)","x":-82,"y":-240,"width":302,"height":60},
+		{"id":"7eb49c88753449c7","type":"text","text":"Gravação de mensagens do [[webhook]] [NAGP_REG_ANSWER_WTS](https://github.com/GiulianoGMS/Oracle_Auto_Reports/blob/main/NAGP_REG_ANSWER_WTS.prc)","x":-82,"y":-320,"width":302,"height":60},
+		{"id":"cd31de2abcc04f18","type":"text","text":"[[Procedure]] principal: [NAGP_ENVIO_WHATS](https://github.com/GiulianoGMS/Oracle_Auto_Reports/blob/main/NAGP_ENVIO_WHATS.prc)","x":-82,"y":-400,"width":302,"height":60},
+		{"id":"3b4e209a6f648922","type":"text","text":"Tabela de Números, Grupos, Types e Keys: NAGT_API_CALL_NUMBERS","x":-82,"y":-480,"width":302,"height":60},
+		{"id":"256d72cdc332eb15","type":"text","text":"Os alertas do BI ficam configurados na tabela NAGT_CONTROLE_ATUALIZACAO_BI\n\nQuando o STATUS = \"A\", a rotina pega a linha da visão e faz os cálculos entre tempo de atualização x tempo de registro da rotina que grava a data de atualização da pagina do Qlik. Se o tempo máximo (min) ultrapassar o configurado, envia o alerta","x":-720,"y":-130,"width":250,"height":350},
+		{"id":"b8ef3063a865919f","type":"text","text":"Execução de Comandos: Apenas números com permissão parametrizados na tabela NAGT_API_CALL_NUMBERS executam ações. Além disto, apenas objetos que começam com NAG__","x":-440,"y":840,"width":660,"height":80},
+		{"id":"7d22ea4c7a39236a","type":"text","text":"Alguns comandos úteis: \n- [NAGP_RECOMPILA_OBJ()](https://github.com/GiulianoGMS/DDL-Objects-Oracle/blob/66feb5d8873fb54ea25ad7255bc552845af6a5c1/NAGP_RECOMPILA_OBJ.prc#L2) - Recompila todos [[objetos inválidos]] no Banco [[PLSQL-Oracle]]\n- [NAGP_KILL_SESSION](https://github.com/GiulianoGMS/DDL-Objects-Oracle/blob/66feb5d8873fb54ea25ad7255bc552845af6a5c1/NAGP_KILL_SESSION.prc#L2)(000,111,2) - Encerrar sessões. [[Variáveis]]: (Sid,Serial,Instancia)","x":-440,"y":940,"width":660,"height":140}
+	],
+	"edges":[
+		{"id":"ff7e5ba2e69de6ac","fromNode":"cd31de2abcc04f18","fromSide":"bottom","toNode":"d4fc5637195a12c7","toSide":"right"},
+		{"id":"5112b31ceed49212","fromNode":"de26aade025b0a4e","fromSide":"right","toNode":"8c7bdc24db0f9615","toSide":"left","color":"4"},
+		{"id":"61c551da1c4f7fd1","fromNode":"524d1c93c03c6515","fromSide":"right","toNode":"6d1112c091927009","toSide":"left","toEnd":"none"},
+		{"id":"a3fbc4c5020d20e6","fromNode":"6680ee91cd295eba","fromSide":"right","toNode":"becee957fb1128a1","toSide":"left","toEnd":"none"},
+		{"id":"90d295ee401e7641","fromNode":"bed1c2d20daee960","fromSide":"right","toNode":"ca342738fb5c3fe5","toSide":"left","toEnd":"none"},
+		{"id":"859bd0e601adc61f","fromNode":"6203eaadaee3aaa2","fromSide":"right","toNode":"5b99613dc5237e57","toSide":"left","toEnd":"none"},
+		{"id":"128a860be6306faa","fromNode":"bed1c2d20daee960","fromSide":"bottom","toNode":"6203eaadaee3aaa2","toSide":"top","toEnd":"none"},
+		{"id":"36d7e45f7854a4ce","fromNode":"6680ee91cd295eba","fromSide":"bottom","toNode":"bed1c2d20daee960","toSide":"top","toEnd":"none"},
+		{"id":"75e0759e5a6bc7c1","fromNode":"524d1c93c03c6515","fromSide":"bottom","toNode":"6680ee91cd295eba","toSide":"top","toEnd":"none"},
+		{"id":"569dd73b7c1577e0","fromNode":"becee957fb1128a1","fromSide":"bottom","toNode":"ca342738fb5c3fe5","toSide":"top","toEnd":"none"},
+		{"id":"ab436213b6d32c07","fromNode":"6d1112c091927009","fromSide":"bottom","toNode":"becee957fb1128a1","toSide":"top","toEnd":"none"},
+		{"id":"e7f656f85e62e332","fromNode":"ca342738fb5c3fe5","fromSide":"bottom","toNode":"5b99613dc5237e57","toSide":"top","toEnd":"none"},
+		{"id":"7dbc169aa5d9802a","fromNode":"7f00f76aa0b600f9","fromSide":"bottom","toNode":"b8ef3063a865919f","toSide":"right"},
+		{"id":"8dc164a269500845","fromNode":"256d72cdc332eb15","fromSide":"right","toNode":"524d1c93c03c6515","toSide":"left"}
+	]
+}

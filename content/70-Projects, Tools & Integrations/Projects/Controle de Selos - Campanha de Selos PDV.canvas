@@ -1,0 +1,16 @@
+{
+	"nodes":[
+		{"id":"a11cfc35ebf3bb0e","type":"file","file":"Controle de Selos - Campanhas PDV Form.md","x":-280,"y":-440,"width":320,"height":490,"color":"5"},
+		{"id":"c98adf3300c24cef","type":"text","text":"[[Query View]] de Controle de [[Selos]] de campanhas do [[PDV]] ([[Campanha de Selos]]). Gera alterações e extrai o relatório [Git](https://github.com/GiulianoGMS/DQL-Oracle/blob/main/SD_Controle%20de%20Selos%20-%20PDV.sql) (Utilizando a [[Procedure]] do quadro 4)\n","x":60,"y":-440,"width":260,"height":160},
+		{"id":"54ab91f71b6d5211","type":"text","text":"Procedure que grava os dados na tabela final (NAGT_CONTROLE_SELOS_PDV_v2)[NAGP_CONTROLE_SELOS_PDV_v2](https://github.com/GiulianoGMS/DDL-Objects-Oracle/blob/main/NAGP_CONTROLE_SELOS_PDV_v2.prc)\n","x":60,"y":-260,"width":260,"height":140},
+		{"id":"36303633e77d724c","type":"text","text":"Regras de Atualização de dados da [[Procedure]] NAGP_UPD_CONTROLE_SELOS_PDV:\n\n**Operações Possíveis:**\n\n1. Ajuste\n2. Estorno de Ajuste\n3. [[Selo]] do Balcão\n###### **1.: Ajustes:**\nAjustes são realizados na tabela final, considerando o limite de divergência entre Selo Inicial - Selo Final que é configurado no [[Parâmetro Dinâmico]] ([[PD]]) DIV_MIN_CONTROLE_SELO\n- PD: **DIV_MIN_CONTROLE_SELO**\n- Grupo: **NAGUMO**\n- Indica o valor mínimo divergente que permitirá alteração da tabela da campanha de selos pelas lojas\n###### **2.: Estornos:**\nAo efetuar um estorno, a coluna referenciada é retornada com os valores originais do select que alimenta a tabela, através da View NAGV_CONTROLE_SELOS_PDV_V2\n###### **3.: Selo do Balcão:**\nA Opção de Selo do Balcão faz um insert avulso na tabela base, considerando que não é lançado originalmente na operação.","x":-280,"y":140,"width":600,"height":740},
+		{"id":"2dd9dd42c3886749","type":"text","text":"Procedure que atualiza dados pela view¹ [NAGP_UPD_CONTROLE_SELOS_PDV](https://github.com/GiulianoGMS/DDL-Objects-Oracle/blob/main/NAGP_UPD_CONTROLE_SELOS_PDV.prc)","x":-280,"y":70,"width":600,"height":50},
+		{"id":"cb710374784ed957","type":"text","text":"Tabela de Log de Atualizações e Estornos: NAGT_CONTROLE_SELOS_PDV_LOG","x":60,"y":-100,"width":260,"height":150},
+		{"id":"e2afa94e45ce0ba0","type":"text","text":"Nota Relacionada: [[Cadastro - Campanha de Selos PDV - Vinculação de Mix de Produtos em Campanhas]]","x":-280,"y":900,"width":600,"height":60},
+		{"id":"99dffadac5865459","type":"file","file":"Cadastro - Campanha de Selos PDV - Vinculação de Mix de Produtos em Campanhas.md","x":340,"y":-440,"width":420,"height":1080}
+	],
+	"edges":[
+		{"id":"1b524b1ab9e29157","fromNode":"2dd9dd42c3886749","fromSide":"bottom","toNode":"36303633e77d724c","toSide":"top"},
+		{"id":"1a5f49d8ed0b655a","fromNode":"c98adf3300c24cef","fromSide":"bottom","toNode":"2dd9dd42c3886749","toSide":"right"}
+	]
+}

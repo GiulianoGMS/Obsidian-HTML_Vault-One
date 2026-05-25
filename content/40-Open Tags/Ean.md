@@ -1,0 +1,1 @@
+[NAG_GERA_EAN13_AUTO](https://github.com/GiulianoGMS/DDL-Objects-Oracle/blob/550a5f61045161cb59c396f03aa5e9e30b3ef989/NAG_GERA_EAN13_AUTO.fnc#L3) ([[Controle de Datas]])
