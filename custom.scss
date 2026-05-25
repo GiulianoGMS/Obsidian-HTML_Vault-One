@@ -33,7 +33,7 @@ body { padding-top: 0 !important; margin-top: 0 !important; }
 html { font-size: 15px; }
 
 /* vault one subtitle */
-.page-title::after { content: "Obsidian notes"; display: block; font-size: 0.78rem; font-weight: 400; color: var(--gray); opacity: 0.75; margin-top: 0.15rem; }
+.page-title::after { content: "Obsidian notes"; display: block; font-size: 0.78rem; font-weight: 400; color: var(--darkgray); opacity: 0.85; margin-top: 0.15rem; }
 
 /* github back link */
 a.github-back-link { display: flex; align-items: center; gap: 0.65rem; color: var(--secondary); font-size: 0.78rem; font-weight: 500; text-decoration: none; padding: 0.3rem 0; margin-bottom: 0.4rem; opacity: 0.9; transition: opacity 0.15s, color 0.15s; }
