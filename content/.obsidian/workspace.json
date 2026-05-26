@@ -4,33 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "09fbf437b71619f5",
+        "id": "441cc8271df5b05a",
         "type": "tabs",
-        "dimension": 50.476889214966974,
+        "dimension": 47.90575916230366,
         "children": [
           {
-            "id": "bd2b433e17a7815d",
+            "id": "dd137d30b79c7930",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "70-Projects, Tools & Integrations/Projects/Tae - Assinatura Eletrônica.md",
+                "file": "90-Custom Override/On/Validações de Inconsistências - PDV TOTVs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tae - Assinatura Eletrônica"
+              "title": "Validações de Inconsistências - PDV TOTVs"
             }
           }
         ]
       },
       {
-        "id": "441cc8271df5b05a",
+        "id": "af1a98be754820fb",
         "type": "tabs",
-        "dimension": 49.523110785033026,
+        "dimension": 52.09424083769634,
         "children": [
           {
-            "id": "dd137d30b79c7930",
+            "id": "cdb07142d9d5b434",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -96,7 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 513.5
+    "width": 348.5
   },
   "right": {
     "id": "9cd1098ad5e76388",
@@ -203,11 +203,17 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "dd137d30b79c7930",
+  "active": "cdb07142d9d5b434",
   "lastOpenFiles": [
+    "90-Custom Override/On/Validações de Inconsistências - PDV TOTVs.md",
+    "{E6B05D8C-9632-4764-8770-78AFDA79645D}.png",
+    "70-Projects, Tools & Integrations/Projects/Controle de Selos - Campanha de Selos PDV.md",
+    "Validações de Inconsistências - PDV TOTVs Form.md.tmp.8132.2b4fa5b28899",
+    "90-Custom Override/On/Correção de Impostos no Recebimento.md",
+    "70-Projects, Tools & Integrations/Projects/Tae - Assinatura Eletrônica.md",
+    "90-Custom Override/On/Correção de Impostos no Recebimento.canvas",
     "70-Projects, Tools & Integrations/Projects/Tae - Assinatura Eletrônica.canvas",
     "70-Projects, Tools & Integrations/Projects/Whatsapp Bot.md",
-    "70-Projects, Tools & Integrations/Projects/Tae - Assinatura Eletrônica.md",
     "70-Projects, Tools & Integrations/Projects/Whatsapp Bot.canvas",
     "70-Projects, Tools & Integrations/Tools/Controle de Promoções - Inaugurações.md",
     "30-Squad/Fiscal.md",
@@ -229,11 +235,7 @@
     "40-Open Tags/Operações Internas.md",
     "10-Repos/DDL-Oracle.md",
     "60-Object Types/Function.md",
-    "Validador de EAN13.md",
-    "Fiscal - Comparativo de Emissão x Lançamentos - Nota de Perda.md",
-    "40-Open Tags/Query View.md",
     "70-Projects, Tools & Integrations/Projects/Extração de XMLs.canvas",
-    "90-Custom Override/On/Correção de Impostos no Recebimento.canvas",
     "70-Projects, Tools & Integrations/Tools/Gerador de Pedidos Ecommerce.canvas",
     "70-Projects, Tools & Integrations/Projects/Pricing - Controle de Datas.canvas",
     "70-Projects, Tools & Integrations/Projects/Controle de Selos - Campanha de Selos PDV.canvas",
@@ -253,7 +255,6 @@
     "Layout - Etiqueta de Cesta Básica.png",
     "index.html",
     "Vault One.html",
-    "index.txt",
     "70-Projects & Integrations/Whatsapp Bot - Copia.canvas",
     "Pricing - Controle de Validade - Layout Etiqueta.png",
     "TAE - Email Compradores.png",
