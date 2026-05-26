@@ -1,9 +1,9 @@
 FROM node:22-alpine AS builder
-# cache-bust: 39
+# cache-bust: 40
 RUN apk add --no-cache git coreutils
 WORKDIR /app
 
-RUN git clone --depth 1 https://github.com/jackyzha0/quartz.git .
+RUN git clone --depth 1 --branch v4 https://github.com/jackyzha0/quartz.git .
 RUN npm ci
 
 COPY content/ ./content/
