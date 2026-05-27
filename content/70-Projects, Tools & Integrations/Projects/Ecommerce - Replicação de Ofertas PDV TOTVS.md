@@ -20,7 +20,7 @@ tags:
 ---
 ### Visão Geral
 
-Rotina criada durante a migração do PDV legado para o **PDV TOTVS**. Replica as ofertas promocionais do parceiro de e-commerce (**Meu Nagumo**) da tabela de remarca (`NAGT_REMARCAPROMOCOES`) para as tabelas de promoção do ERP, tornando as ofertas disponíveis para o PDV TOTVS.
+Rotina criada durante a migração do PDV legado para o **PDV TOTVS**. Replica as ofertas promocionais do parceiro de e-commerce da tabela de remarca (`NAGT_REMARCAPROMOCOES`) para as tabelas de promoção do ERP, tornando as ofertas disponíveis para o PDV TOTVS.
 
 Pode ser executada manualmente passando um código de promoção e/ou data específica, ou chamada por JOB diário sem parâmetros — nesse caso processa todas as promoções com início no dia corrente.
 
@@ -102,3 +102,29 @@ Vincula cada loja participante da promoção ao cabeçalho, com o mesmo `STATUS`
 ### Links
 
 - [Procedure — NAGP_REP_ECOMMERCE](https://github.com/GiulianoGMS/DDL-Objects-Oracle/blob/main/NAGP_REP_ECOMMERCE.prc)
+
+---
+
+### NAGP_ALT_PROMOC_ECOMM — Inativar ou Excluir Promoção Replicada
+
+Procedimento complementar à `NAGP_REP_ECOMMERCE`. Permite inativar ou remover completamente uma promoção de e-commerce que já foi replicada para o ERP.
+
+**Parâmetros:**
+
+| Parâmetro | Tipo | Descrição |
+|-----------|------|-----------|
+| `psCodPromocao` | NUMBER | Código da promoção a gerenciar (mesmo código da origem `NAGT_REMARCAPROMOCOES`) |
+| `psComando` | VARCHAR2 | `'I'` = inativar · `'D'` = excluir completamente |
+
+**Lógica:**
+
+Localiza o `SEQPROMOCPDV` via `MFL_PROMOCAOPDV.DESCRICAO LIKE '%CODPROMOCAO%'`. Se encontrado:
+
+| Comando | Ação |
+|---------|------|
+| `'I'` | `UPDATE MFL_PROMOCAOPDV SET STATUS = 'I'` — inativa a promoção sem remover os dados |
+| `'D'` | DELETE em cascata em todas as tabelas filhas, na ordem: `MFL_PROMOCPDVDESCAPARTDE` → `MFL_PROMOCPDVEMP` → `MFL_PROMOCPDVITEM` → `MFL_PROMOCPDVSEGMENTO` → `MFL_PROMOCAOPDV` |
+
+> Se o código informado não existir no ERP, a procedure não faz nada (sem erro).
+
+- [Procedure — NAGP_ALT_PROMOC_ECOMM](https://github.com/GiulianoGMS/DDL-Objects-Oracle/blob/main/NAGP_ALT_PROMOC_ECOMM.prc)
