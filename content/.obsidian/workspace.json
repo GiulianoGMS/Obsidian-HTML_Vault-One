@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "70-Projects, Tools & Integrations/Projects/Lote de Compra - Geração Automática.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lote de Compra - Geração Automática"
+              "title": "index"
             }
           }
         ]
@@ -203,6 +203,7 @@
   },
   "active": "cdb07142d9d5b434",
   "lastOpenFiles": [
+    "NAGT_PED_GERADO.png",
     "70-Projects, Tools & Integrations/Projects/Lote de Compra - Geração Automática.md",
     "70-Projects, Tools & Integrations/Projects/Lote de Compra - Geração Automática.md",
     "Centros de Distribuição.md",
@@ -234,7 +235,6 @@
     "30-Squad/Recebimento.md",
     "40-Open Tags/Venda Balcão.md",
     "40-Open Tags/IndUtilVenda.md",
-    "40-Open Tags/Produtor Rural.md",
     "70-Projects, Tools & Integrations/Projects/Extração de XMLs.canvas",
     "70-Projects, Tools & Integrations/Tools/Gerador de Pedidos Ecommerce.canvas",
     "70-Projects, Tools & Integrations/Projects/Pricing - Controle de Datas.canvas",
@@ -247,7 +247,6 @@
     "Cálculo Desonerado.png",
     "Sem título.canvas",
     "TAE - Aviso de Acordos Pendentes dentro do ERP.png",
-    "NAGT_PED_GERADO.png",
     "70-Projects, Tools & Integrations/Projects",
     "70-Projects, Tools & Integrations/Integrations",
     "70-Projects, Tools & Integrations/Tools",

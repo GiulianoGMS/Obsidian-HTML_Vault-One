@@ -14,6 +14,7 @@ Scripts salvos no Github [Link](https://github.com/GiulianoGMS)
 - [[Extração de XMLs]]
 - [[Pricing - Controle de Datas]]
 - [[Tae - Assinatura Eletrônica]]
+- [[Lote de Compra - Geração Automática]]
 
 ## Ferramentas
 
