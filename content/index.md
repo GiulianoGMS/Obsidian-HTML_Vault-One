@@ -1,9 +1,6 @@
-﻿---
+---
 title: Vault One
 ---
-
-# Vault One
-
 Base de conhecimento técnico — scripts, projetos e integrações do ERP **Consinco / PDV TOTVS**.
 Objetos e repositórios disponíveis no [GitHub →](https://github.com/GiulianoGMS)
 
@@ -30,7 +27,7 @@ Objetos e repositórios disponíveis no [GitHub →](https://github.com/Giuliano
 > | Integração | Plataforma | Dados exportados |
 > |------------|-----------|-----------------|
 > | [[Instaleap - Integração de Catálogo\|Instaleap]] | Instaleap / Meu Nagumo | Catálogo (estoque, preço, status) · Produto (cadastro, EAN, foto, nutrição) · Promoções |
-> | [[Backlgrs CRM - Integração de Dados\|Backlgrs CRM]] | Backlgrs CRM | Catálogo · Produto · Clientes (CPF, push token) · Filiais · Vendas · Ofertas |
+> | [[Backlgrs - Salesforce]] | Backlgrs CRM | Catálogo · Produto · Clientes (CPF, push token) · Filiais · Vendas · Ofertas |
 
 > [!tip]+ Ferramentas
 > Utilitários e ferramentas de apoio operacional.
