@@ -20,3 +20,4 @@ Scripts salvos no Github [Link](https://github.com/GiulianoGMS)
 - [[Gerador de Pedidos Ecommerce]]
 - [[Controle de Promoções - Inaugurações]]
 - [[Validador de EAN13]]
+
