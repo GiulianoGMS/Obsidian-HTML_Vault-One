@@ -5,6 +5,7 @@ title: Vault One
 # Vault One
 
 Base de conhecimento técnico — consultas, procedimentos, inconsistências e ferramentas do ERP.
+Scripts salvos no Github [Link](https://github.com/GiulianoGMS)
 
 ## Projetos
 

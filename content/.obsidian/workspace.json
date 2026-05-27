@@ -6,7 +6,7 @@
       {
         "id": "441cc8271df5b05a",
         "type": "tabs",
-        "dimension": 47.90575916230366,
+        "dimension": 45.37591483699268,
         "children": [
           {
             "id": "dd137d30b79c7930",
@@ -27,16 +27,20 @@
       {
         "id": "af1a98be754820fb",
         "type": "tabs",
-        "dimension": 52.09424083769634,
+        "dimension": 54.62408516300732,
         "children": [
           {
             "id": "cdb07142d9d5b434",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Visualização em gráfico"
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "index"
             }
           }
         ]
@@ -205,6 +209,7 @@
   },
   "active": "cdb07142d9d5b434",
   "lastOpenFiles": [
+    "20-System/PLSQL-ERP-Consinco.md",
     "90-Custom Override/On/Validações de Inconsistências - PDV TOTVs.md",
     "{E6B05D8C-9632-4764-8770-78AFDA79645D}.png",
     "70-Projects, Tools & Integrations/Projects/Controle de Selos - Campanha de Selos PDV.md",
@@ -218,7 +223,6 @@
     "70-Projects, Tools & Integrations/Tools/Controle de Promoções - Inaugurações.md",
     "30-Squad/Fiscal.md",
     "10-Repos/DQL-Oracle.md",
-    "20-System/PLSQL-ERP-Consinco.md",
     "30-Squad/Comercial.md",
     "40-Open Tags/Margem.md",
     "40-Open Tags/Tabela de Custo.md",
