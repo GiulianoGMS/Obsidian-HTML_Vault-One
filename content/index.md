@@ -11,7 +11,7 @@ Objetos e repositórios disponíveis no [GitHub →](https://github.com/Giuliano
 >
 > | Projeto | Descrição |
 > |---------|-----------|
-> | [[Whatsapp Bot]] | Agente IA integrado ao WhatsApp via Evolution API |
+> | [[Whatsapp Bot]] | Agente Oracle integrado ao WhatsApp 
 > | [[Lote de Compra - Geração Automática]] | Geração automática de lotes de compra com sugestão MIN/MAX |
 > | [[Validações de Inconsistências - PDV TOTVs Form]] | Validações de produtos, famílias e tributações — PKG_INCONSISTENCIAS |
 > | [[Ecommerce - Replicação de Ofertas PDV TOTVS]] | Replica ofertas do Meu Nagumo para o PDV TOTVS via remarca |
