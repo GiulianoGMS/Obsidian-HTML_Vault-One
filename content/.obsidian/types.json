@@ -8,6 +8,7 @@
     "System": "multitext",
     "Repository": "multitext",
     "Language": "multitext",
-    "Type": "text"
+    "Type": "text",
+    "title": "text"
   }
 }
