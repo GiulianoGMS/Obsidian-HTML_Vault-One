@@ -1,4 +1,4 @@
----
+﻿---
 title: Vault One
 ---
 
@@ -15,10 +15,12 @@ Scripts salvos no Github [Link](https://github.com/GiulianoGMS)
 - [[Pricing - Controle de Datas]]
 - [[Tae - Assinatura Eletrônica]]
 - [[Lote de Compra - Geração Automática]]
+- [[Validações de Inconsistências - PDV TOTVs Form]]
+- [[Ecommerce - Replicação de Ofertas PDV TOTVS]]
+- [[Ecommerce - Replicação por Encarte (MN)]]
 
 ## Ferramentas
 
 - [[Gerador de Pedidos Ecommerce]]
 - [[Controle de Promoções - Inaugurações]]
 - [[Validador de EAN13]]
-
