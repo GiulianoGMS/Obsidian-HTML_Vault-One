@@ -1,4 +1,4 @@
-﻿---
+---
 Language:
   - "[[SQL]]"
 Repository:
@@ -86,16 +86,16 @@ Vincula cada loja participante da promoção ao cabeçalho, com o mesmo `STATUS`
 
 ### Tabelas Envolvidas
 
-| Tabela | Papel |
-|--------|-------|
-| `NAGT_REMARCAPROMOCOES` | Origem — dados de remarca do parceiro Meu Nagumo |
-| `MFL_PROMOCAOPDV` | Destino — cabeçalho da promoção no PDV TOTVS |
-| `MFL_PROMOCPDVITEM` | Destino — itens da promoção |
-| `MFL_PROMOCPDVDESCAPARTDE` | Destino — descontos e preços por loja |
-| `MFL_PROMOCPDVEMP` | Destino — lojas vinculadas à promoção |
-| `MAP_PRODCODIGO` | Resolução EAN → SeqProduto |
-| `MRL_PRODEMPSEG` | Preço normal vigente por empresa/segmento |
-| `MAP_FAMILIA` | Verificação de produto pesável |
+| Tabela                     | Papel                                            |
+| -------------------------- | ------------------------------------------------ |
+| `NAGT_REMARCAPROMOCOES`    | Origem — dados de remarca do parceiro Meu Nagumo |
+| `MFL_PROMOCAOPDV`          | Destino — cabeçalho da promoção no PDV TOTVS     |
+| `MFL_PROMOCPDVITEM`        | Destino — itens da promoção                      |
+| `MFL_PROMOCPDVDESCAPARTDE` | Destino — descontos e preços por loja            |
+| `MFL_PROMOCPDVEMP`         | Destino — lojas vinculadas à promoção            |
+| `MAP_PRODCODIGO`           | Resolução EAN → SeqProduto                       |
+| `MRL_PRODEMPSEG`           | Preço normal vigente por empresa/segmento        |
+| `MAP_FAMILIA`              | Verificação de produto pesável                   |
 
 ---
 
@@ -127,4 +127,4 @@ Localiza o `SEQPROMOCPDV` via `MFL_PROMOCAOPDV.DESCRICAO LIKE '%CODPROMOCAO%'`. 
 
 > Se o código informado não existir no ERP, a procedure não faz nada (sem erro).
 
-- [Procedure — NAGP_ALT_PROMOC_ECOMM](https://github.com/GiulianoGMS/DDL-Objects-Oracle/blob/main/NAGP_ALT_PROMOC_ECOMM.prc)
+- [Procedure — NAGP_ALT_PROMOC_ECOMM](https://github.com/GiulianoGMS/DDL-Objects-Oracle/blob/main/NAGP_ALT_PROMOC_ECOMM.prc).
