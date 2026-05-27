@@ -1,4 +1,4 @@
----
+﻿---
 Language:
   - "[[SQL]]"
 Repository:
@@ -70,6 +70,51 @@ Package responsável pelo cálculo e atualização da sugestão de compra, acion
 | `AC` | Arredonda nas lojas conforme parâmetros configurados |
 | `CA` | Cálculo MIN/MAX interno Nagumo — arredonda CD (altera lojas e CD) |
 | `CN` | Cálculo MIN/MAX interno Nagumo — sem arredondar no CD (altera lojas e CD) |
+
+---
+
+### Cálculo MIN MAX Interno (NAGF_CALC_SUGEST_COMPRA)
+
+Função desenvolvida internamente pelo Nagumo para calcular a sugestão de compra por produto/empresa. Utilizada pelos modos `CA` e `CN`.
+
+**Parâmetros de entrada:**
+
+| Parâmetro | Descrição |
+|-----------|-----------|
+| `pdSeqFornecedor` | Fornecedor — usado para buscar o prazo médio de atraso |
+| `pdNroEmpresa` | Empresa de referência (loja ou CD) |
+| `pdSeqProduto` | Produto |
+| `pdPeriodoCalc` | Período de cálculo em dias (configurado na capa do lote) |
+| `pdIndTipoMedVda` | Tipo de média: `N` = geral · `P` = promoção · `E` = fora promoção |
+| `pdConsEmpAbast` | `S/N` — considera estoque da empresa abastecedora no cálculo das lojas |
+| `pdTipoRetorno` | `S` = sugestão limitada · `T` = necessidade total bruta |
+
+**Fórmula:**
+
+Para cada empresa vinculada ao lote, a função projeta o estoque ao fim do período de reposição:
+
+```
+Previsão de Estoque = Estoque Atual − (Média Diária × Dias do Período)
+```
+
+O período de projeção vai de `SYSDATE` até `SYSDATE + pdPeriodoCalc + DiasAtrasoFornecedor − 1`, absorvendo o prazo médio de entrega do fornecedor.
+
+Com base na previsão, calcula a necessidade de compra e aplica os limites MIN/MAX configurados por produto/empresa (`MRL_PRODUTOEMPRESA.ESTQMINIMODV` / `ESTQMAXIMODV`):
+
+```
+Necessidade   = EstqMin − Previsão de Estoque
+Sugestão Loja = MIN(Necessidade, EstqMax)        ← limitada ao máximo
+Sugestão CD   = MAX(0, Necessidade − EstqMax)    ← excedente que o CD abastece
+```
+
+**Retorno por tipo de empresa e modo:**
+
+| Empresa | `pdTipoRetorno = 'S'` | `pdTipoRetorno = 'T'` |
+|---------|-----------------------|-----------------------|
+| Loja    | Sugestão até o limite do `EstqMax` | Necessidade total bruta |
+| CD      | Excedente que ultrapassa o `EstqMax` das lojas | Necessidade total bruta |
+
+> **Diferença entre CA e CN:** ambos executam o mesmo cálculo MIN/MAX e atualizam lojas + CD. A diferença é que `CA` arredonda a compra final do CD para o múltiplo de embalagem, enquanto `CN` mantém o valor exato calculado.
 
 ---
 
