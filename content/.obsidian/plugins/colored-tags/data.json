@@ -11,7 +11,6 @@
   },
   "knownTags": {
     "acordos": 6,
-    "automação": 7,
     "custom_override": 1,
     "ecommerce": 8,
     "email": 9,
@@ -19,7 +18,6 @@
     "ferramenta": 11,
     "impostos": 12,
     "integrations": 25,
-    "monitoramento": 13,
     "paliativo": 14,
     "paliativos": 2,
     "pdv": 15,
@@ -33,7 +31,6 @@
     "selos": 21,
     "tae": 22,
     "tools": 5,
-    "whatsapp": 23,
     "xml": 24
   },
   "tagColors": {},

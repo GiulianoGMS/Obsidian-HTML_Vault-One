@@ -11,9 +11,9 @@ Objetos e repositórios disponíveis no [GitHub →](https://github.com/Giuliano
 >
 > | Projeto | Descrição |
 > |---------|-----------|
-> | [[Whatsapp Bot]] | Agente Oracle integrado ao WhatsApp 
+> | [[Oracle Auto Reports - Whatsapp Bot]] | Agente Oracle integrado ao WhatsApp 
 > | [[Lote de Compra - Geração Automática]] | Geração automática de lotes de compra com sugestão MIN/MAX |
-> | [[Validações de Inconsistências - PDV TOTVs Form]] | Validações de produtos, famílias e tributações — PKG_INCONSISTENCIAS |
+> | [[Validações de Inconsistências - PDV TOTVs]] | Validações de produtos, famílias e tributações — PKG_INCONSISTENCIAS |
 > | [[Ecommerce - Replicação de Ofertas PDV TOTVS]] | Replica ofertas do Meu Nagumo para o PDV TOTVS via remarca |
 > | [[Ecommerce - Replicação por Encarte (MN)]] | Substituto da replicação legado — usa encartes nativos do ERP |
 > | [[Controle de Selos - Campanha de Selos PDV]] | Controle de campanhas de selos no PDV |
@@ -26,7 +26,7 @@ Objetos e repositórios disponíveis no [GitHub →](https://github.com/Giuliano
 >
 > | Integração | Plataforma | Dados exportados |
 > |------------|-----------|-----------------|
-> | [[Instaleap - Integração de Catálogo\|Instaleap]] | Instaleap / Meu Nagumo | Catálogo (estoque, preço, status) · Produto (cadastro, EAN, foto, nutrição) · Promoções |
+> | [[Instaleap]] | Instaleap / Meu Nagumo | Catálogo (estoque, preço, status) · Produto (cadastro, EAN, foto, nutrição) · Promoções |
 > | [[Backlgrs - Salesforce]] | Backlgrs CRM | Catálogo · Produto · Clientes (CPF, push token) · Filiais · Vendas · Ofertas |
 
 > [!tip]+ Ferramentas

@@ -6,9 +6,27 @@
       {
         "id": "af1a98be754820fb",
         "type": "tabs",
+        "dimension": 47.20744680851064,
         "children": [
           {
             "id": "cdb07142d9d5b434",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nova aba"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ed3dbe1ddc659c04",
+        "type": "tabs",
+        "dimension": 52.79255319148937,
+        "children": [
+          {
+            "id": "494c8aced6781c3e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,22 +37,6 @@
               },
               "icon": "lucide-file",
               "title": "index"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ed3dbe1ddc659c04",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "494c8aced6781c3e",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Visualização em gráfico"
             }
           }
         ]
@@ -203,12 +205,18 @@
   },
   "active": "494c8aced6781c3e",
   "lastOpenFiles": [
+    "70-Projects, Tools & Integrations/Projects/Pricing - Controle de Datas.canvas",
+    "70-Projects, Tools & Integrations/Projects/Oracle Auto Reports - Whatsapp Bot.md",
+    "70-Projects, Tools & Integrations/Projects/Whatsapp Bot.md",
+    "70-Projects, Tools & Integrations/Projects/Whatsapp Bot.canvas",
+    "Whatsapp Bot.md",
     "index.md",
+    "Reforma Tributária.md",
     "Backlgrs CRM - Integração de Dados.md",
     "Layout - Etiqueta de Cesta Básica.png",
-    "70-Projects, Tools & Integrations/Integrations/Backlgrs CRM/Backlgrs - Salesforce.md",
+    "70-Projects, Tools & Integrations/Integrations/Salesforce/Backlgrs - Salesforce.md",
     "70-Projects, Tools & Integrations/Integrations/Instaleap/Instaleap.md",
-    "70-Projects, Tools & Integrations/Integrations/Backlgrs CRM",
+    "70-Projects, Tools & Integrations/Integrations/Salesforce",
     "70-Projects, Tools & Integrations/Projects/Ecommerce - Replicação por Encarte (MN).md",
     "70-Projects, Tools & Integrations/Integrations/Instaleap",
     "40-Open Tags/Inconsistencia Recebimento NFe.md",
@@ -230,18 +238,11 @@
     "70-Projects, Tools & Integrations/Projects/Tae - Assinatura Eletrônica.md",
     "90-Custom Override/On/Correção de Impostos no Recebimento.canvas",
     "70-Projects, Tools & Integrations/Projects/Tae - Assinatura Eletrônica.canvas",
-    "70-Projects, Tools & Integrations/Projects/Whatsapp Bot.md",
-    "70-Projects, Tools & Integrations/Projects/Whatsapp Bot.canvas",
     "70-Projects, Tools & Integrations/Tools/Controle de Promoções - Inaugurações.md",
     "30-Squad/Fiscal.md",
     "10-Repos/DQL-Oracle.md",
-    "30-Squad/Comercial.md",
-    "40-Open Tags/Margem.md",
-    "40-Open Tags/Tabela de Custo.md",
-    "10-Repos/Useful_Tools.md",
     "70-Projects, Tools & Integrations/Projects/Extração de XMLs.canvas",
     "70-Projects, Tools & Integrations/Tools/Gerador de Pedidos Ecommerce.canvas",
-    "70-Projects, Tools & Integrations/Projects/Pricing - Controle de Datas.canvas",
     "70-Projects, Tools & Integrations/Projects/Controle de Selos - Campanha de Selos PDV.canvas",
     "80-Paliativos - Nao precisa Reaplicar/On",
     "90-Custom Override/Off",
