@@ -19,7 +19,8 @@ Objetos e repositórios disponíveis no [GitHub →](https://github.com/Giuliano
 > | [[Ecommerce - Replicação por Encarte (MN)]] | Substituto da replicação legado — usa encartes nativos do ERP |
 > | [[Controle de Selos - Campanha de Selos PDV]] | Controle de campanhas de selos no PDV |
 > | [[Extração de XMLs]] | Extração e processamento de XMLs fiscais |
-> | [[Pricing - Controle de Datas]] | Controle de datas do processo de pricing |
+> | [[Pricing - Controle de Datas]] | Rebaixa automática de produtos próximos ao vencimento — etiqueta rosa + promoções |
+> | [[Pricing - Controle de Validade - Layout Etiqueta]] | Layout da etiqueta dupla de validade + view de emissão `MRLV_PROMOCAOESPECIAL` |
 > | [[Tae - Assinatura Eletrônica]] | Integração com TOTVS Assinatura Eletrônica |
 
 > [!example]+ Integrações
