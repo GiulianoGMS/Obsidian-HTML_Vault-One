@@ -1,4 +1,4 @@
----
+﻿---
 title: Vault One
 ---
 Base de conhecimento técnico — scripts, projetos e integrações do ERP **Consinco / PDV TOTVS**.
@@ -12,6 +12,7 @@ Objetos e repositórios disponíveis no [GitHub →](https://github.com/Giuliano
 > | Projeto | Descrição |
 > |---------|-----------|
 > | [[Oracle Auto Reports - Whatsapp Bot]] | Agente Oracle integrado ao WhatsApp 
+> | [[BLB - Extracao Fiscal]] | Extração fiscal de NF-e saídas, entradas e cupons SAT para CSV |
 > | [[Lote de Compra - Geração Automática]] | Geração automática de lotes de compra com sugestão MIN/MAX |
 > | [[Validações de Inconsistências - PDV TOTVs]] | Validações de produtos, famílias e tributações — PKG_INCONSISTENCIAS |
 > | [[Ecommerce - Replicação de Ofertas PDV TOTVS]] | Replica ofertas do Meu Nagumo para o PDV TOTVS via remarca |

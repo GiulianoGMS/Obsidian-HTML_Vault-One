@@ -19,9 +19,9 @@ tags:
 ---
 ### Visão Geral
 
-> **Em fase de testes.** Este objeto é o sucessor da [[Ecommerce - Replicação de Ofertas PDV TOTVS|NAGP_REP_ECOMMERCE]]. A tabela legado `NAGT_REMARCAPROMOCOES` deixa de ser necessária — a origem passa a ser a view `NAGV_BASE_MN_ENCARTE`, construída sobre as tabelas nativas de encarte do ERP (`MRL_ENCARTE` / `MRL_ENCARTEPRODUTOPRECO`).
+> **Em fase de testes.** Este objeto é o sucessor da [[Ecommerce - Replicação de Ofertas PDV TOTVS|NAGP_REP_ECOMMERCE]]. A tabela legado `NAGT_REMARCAPROMOCOES` deixa de ser necessária — a origem passa a ser a view `NAGV_BASE_MN_ENCARTE`, construída sobre as tabelas nativas de [[Encarte]] do [[ERP]] (`MRL_ENCARTE` / `MRL_ENCARTEPRODUTOPRECO`).
 
-Replica as ofertas de encarte do **Meu Nagumo** para as tabelas de promoção do PDV TOTVS, gerando uma promoção por segmento presente no encarte. Suporta expansão automática de itens por **família** e/ou **similaridade**.
+Replica as [[Oferta|ofertas]] de [[Encarte]] do **[[Meu Nagumo]]** para as tabelas de [[Promoção]] do [[PDV TOTVS]], gerando uma [[Promoção]] por segmento presente no [[Encarte]]. Suporta expansão automática de itens por **[[Família]]** e/ou **similaridade**.
 
 ---
 
@@ -29,9 +29,9 @@ Replica as ofertas de encarte do **Meu Nagumo** para as tabelas de promoção do
 
 | Parâmetro | Tipo | Descrição |
 |-----------|------|-----------|
-| `psSeqEncarte` | NUMBER | Sequencial do encarte a replicar (`MRL_ENCARTE.SEQENCARTE`) |
-| `psIndRepFam` | VARCHAR2 | `'S'` = expande para todos os produtos da família · `'N'` = apenas o produto do encarte |
-| `psIndRepSim` | VARCHAR2 | `'S'` = expande para produtos similares (`MAP_PRODSIMILAR`) · `'N'` = não expande |
+| `psSeqEncarte` | NUMBER | Sequencial do [[Encarte]] a replicar (`MRL_ENCARTE.SEQENCARTE`) |
+| `psIndRepFam` | VARCHAR2 | `'S'` = expande para todos os produtos da [[Família]] · `'N'` = apenas o produto do [[Encarte]] |
+| `psIndRepSim` | VARCHAR2 | `'S'` = expande para produtos similares · `'N'` = não expande |
 
 ---
 
@@ -39,23 +39,23 @@ Replica as ofertas de encarte do **Meu Nagumo** para as tabelas de promoção do
 
 | Aspecto | NAGP_REP_ECOMMERCE (legado) | NAGP_MN_ENCARTE (novo) |
 |---------|----------------------------|------------------------|
-| Origem dos dados | `NAGT_REMARCAPROMOCOES` | `NAGV_BASE_MN_ENCARTE` (view sobre ERP) |
+| Origem dos dados | `NAGT_REMARCAPROMOCOES` ([[Remarca]]) | `NAGV_BASE_MN_ENCARTE` (view sobre [[ERP]]) |
 | Chave de entrada | `CODPROMOCAO` + `DATA` | `SEQENCARTE` |
 | Loop externo | Nenhum | Por segmento (`NROSEGMENTO`) |
-| Descrição da promoção | `'MEU NAGUMO - ' \|\| CODPROMOCAO` | `DESC_PROMOC` (vem da view) |
+| Descrição da [[Promoção]] | `'MEU NAGUMO - ' \|\| CODPROMOCAO` | `DESC_PROMOC` (vem da view) |
 | Status da capa | `'I'` se > 100 dias, `'A'` caso contrário | Sempre `'A'` |
-| Expansão de itens | Produto exato (via EAN) | Produto, família e/ou similar |
+| Expansão de itens | Produto exato (via [[EAN]]) | Produto, [[Família]] e/ou similar |
 | `USUALTERACAO` | `'REP_AUTO'` | `'MN_ENCARTE'` |
 
 ---
 
 ### Fluxo — Loop por Segmento
 
-Para cada `NROSEGMENTO` do encarte (sem duplicidade em `MFL_PROMOCAOPDV`):
+Para cada `NROSEGMENTO` do [[Encarte]] (sem duplicidade em `MFL_PROMOCAOPDV`):
 
 **1. Loop Capa** → `MFL_PROMOCAOPDV`
 
-Cria um cabeçalho de promoção por segmento, com `STATUS = 'A'` e descrição vinda de `DESC_PROMOC` da view.
+Cria um cabeçalho de [[Promoção]] por segmento, com `STATUS = 'A'` e descrição vinda de `DESC_PROMOC` da view.
 
 **2. Loop Item** → `MFL_PROMOCPDVITEM`
 
@@ -63,14 +63,14 @@ Monta o conjunto de produtos com base nos parâmetros `psIndRepFam` e `psIndRepS
 
 | Cenário | `psIndRepFam` | `psIndRepSim` | Produtos incluídos |
 |---------|--------------|--------------|---------------------|
-| Produto exato | `N` | `N` | Apenas o produto do encarte |
-| Expansão família | `S` | `N` | Todos os produtos da mesma família |
+| Produto exato | `N` | `N` | Apenas o produto do [[Encarte]] |
+| Expansão [[Família]] | `S` | `N` | Todos os produtos da mesma [[Família]] |
 | Expansão similar | `N` | `S` | Todos os similares via `MAP_PRODSIMILAR` |
-| Família + Similar | `S` | `S` | Todos os produtos da família que possuem similares |
+| [[Família]] + Similar | `S` | `S` | Todos os produtos da [[Família]] que possuem similares |
 
 **3. Loop Item_Loja** → `MFL_PROMOCPDVDESCAPARTDE`
 
-Insere desconto por loja usando preço do encarte (`PRECO_MN`) vs. preço normal vigente:
+Insere desconto por [[Loja]] usando preço do [[Encarte]] (`PRECO_MN`) vs. preço normal vigente:
 
 ```
 VLRDESCONTO  = PRECOVALIDNORMAL − PRECO_MN
@@ -78,11 +78,11 @@ PERCDESCONTO = ((PRECOVALIDNORMAL − PRECO_MN) / PRECOVALIDNORMAL) × 100
 ```
 
 > Para produtos **pesáveis**: `QTDAPARTIRDE = 0.01` · Para os demais: `QTDAPARTIRDE = 1`
-> Só replica lojas onde `PRECO_MN < PRECOVALIDNORMAL`.
+> Só replica [[Loja|lojas]] onde `PRECO_MN < PRECOVALIDNORMAL`.
 
 **4. Loop Empresa** → `MFL_PROMOCPDVEMP`
 
-Vincula as lojas do segmento à promoção gerada.
+Vincula as [[Loja|lojas]] do segmento à [[Promoção]] gerada.
 
 ---
 
@@ -91,12 +91,12 @@ Vincula as lojas do segmento à promoção gerada.
 | Tabela / View | Papel |
 |---------------|-------|
 | `NAGV_BASE_MN_ENCARTE` | Origem — view sobre `MRL_ENCARTE` / `MRL_ENCARTEPRODUTOPRECO` |
-| `MRL_ENCARTE` | Encarte nativo do ERP (substituiu `NAGT_REMARCAPROMOCOES`) |
-| `MFL_PROMOCAOPDV` | Destino — cabeçalho da promoção por segmento |
-| `MFL_PROMOCPDVITEM` | Destino — itens da promoção |
-| `MFL_PROMOCPDVDESCAPARTDE` | Destino — descontos e preços por loja |
-| `MFL_PROMOCPDVEMP` | Destino — lojas vinculadas |
-| `MAP_PRODUTO` / `MAP_FAMILIA` | Expansão por família e verificação de pesável |
+| `MRL_ENCARTE` | [[Encarte]] nativo do [[ERP]] (substituiu `NAGT_REMARCAPROMOCOES`) |
+| `MFL_PROMOCAOPDV` | Destino — cabeçalho da [[Promoção]] por segmento |
+| `MFL_PROMOCPDVITEM` | Destino — itens da [[Promoção]] |
+| `MFL_PROMOCPDVDESCAPARTDE` | Destino — descontos e preços por [[Loja]] |
+| `MFL_PROMOCPDVEMP` | Destino — [[Loja|lojas]] vinculadas |
+| `MAP_PRODUTO` / `MAP_FAMILIA` | Expansão por [[Família]] e verificação de pesável |
 | `MAP_PRODSIMILAR` | Expansão por similaridade |
 | `MRL_PRODEMPSEG` | Preço normal vigente por empresa/segmento |
 

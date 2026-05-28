@@ -12,10 +12,14 @@
             "id": "cdb07142d9d5b434",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "index"
             }
           }
         ]
@@ -29,14 +33,10 @@
             "id": "494c8aced6781c3e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "index.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "index"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
             }
           }
         ]
@@ -203,30 +203,31 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "494c8aced6781c3e",
+  "active": "cdb07142d9d5b434",
   "lastOpenFiles": [
-    "70-Projects, Tools & Integrations/Projects/Pricing - Controle de Datas.canvas",
+    "70-Projects, Tools & Integrations/Integrations/Instaleap/Instaleap.md",
     "70-Projects, Tools & Integrations/Projects/Oracle Auto Reports - Whatsapp Bot.md",
+    "70-Projects, Tools & Integrations/Projects/Ecommerce - Replicação por Encarte (MN).md",
+    "70-Projects, Tools & Integrations/Projects/Ecommerce - Replicação de Ofertas PDV TOTVS.md",
+    "70-Projects, Tools & Integrations/Projects/Lote de Compra - Geração Automática.md",
+    "Whatsapp Bot Form.md",
+    "Whatsapp Bot.md",
+    "70-Projects, Tools & Integrations/Projects/BLB - Extracao Fiscal.md",
+    "70-Projects, Tools & Integrations/Projects/Controle de Selos - Campanha de Selos PDV.md",
+    "index.md",
+    "70-Projects, Tools & Integrations/Projects/Pricing - Controle de Datas.canvas",
     "70-Projects, Tools & Integrations/Projects/Whatsapp Bot.md",
     "70-Projects, Tools & Integrations/Projects/Whatsapp Bot.canvas",
-    "Whatsapp Bot.md",
-    "index.md",
     "Reforma Tributária.md",
     "Backlgrs CRM - Integração de Dados.md",
     "Layout - Etiqueta de Cesta Básica.png",
     "70-Projects, Tools & Integrations/Integrations/Salesforce/Backlgrs - Salesforce.md",
-    "70-Projects, Tools & Integrations/Integrations/Instaleap/Instaleap.md",
     "70-Projects, Tools & Integrations/Integrations/Salesforce",
-    "70-Projects, Tools & Integrations/Projects/Ecommerce - Replicação por Encarte (MN).md",
     "70-Projects, Tools & Integrations/Integrations/Instaleap",
     "40-Open Tags/Inconsistencia Recebimento NFe.md",
     "40-Open Tags/Critica.md",
     "70-Projects, Tools & Integrations/Projects/Extração de XMLs.md",
-    "70-Projects, Tools & Integrations/Projects/Controle de Selos - Campanha de Selos PDV.md",
-    "70-Projects, Tools & Integrations/Projects/Ecommerce - Replicação de Ofertas PDV TOTVS.md",
     "NAGT_PED_GERADO.png",
-    "70-Projects, Tools & Integrations/Projects/Lote de Compra - Geração Automática.md",
-    "70-Projects, Tools & Integrations/Projects/Lote de Compra - Geração Automática.md",
     "Centros de Distribuição.md",
     "90-Custom Override/On/Validações de Inconsistências - PDV TOTVs.md",
     "Lote de Compra - Geração Automática Form.md.tmp.28356.9a31eea0f47a",
@@ -240,7 +241,6 @@
     "70-Projects, Tools & Integrations/Projects/Tae - Assinatura Eletrônica.canvas",
     "70-Projects, Tools & Integrations/Tools/Controle de Promoções - Inaugurações.md",
     "30-Squad/Fiscal.md",
-    "10-Repos/DQL-Oracle.md",
     "70-Projects, Tools & Integrations/Projects/Extração de XMLs.canvas",
     "70-Projects, Tools & Integrations/Tools/Gerador de Pedidos Ecommerce.canvas",
     "70-Projects, Tools & Integrations/Projects/Controle de Selos - Campanha de Selos PDV.canvas",
