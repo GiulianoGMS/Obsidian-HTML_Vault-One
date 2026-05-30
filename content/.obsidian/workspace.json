@@ -6,6 +6,7 @@
       {
         "id": "ed3dbe1ddc659c04",
         "type": "tabs",
+        "dimension": 62.965425531914896,
         "children": [
           {
             "id": "494c8aced6781c3e",
@@ -13,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "70-Projects, Tools & Integrations/Projects/Pricing - Controle de Datas.md",
+                "file": "70-Projects, Tools & Integrations/Projects/BLB - Extracao Fiscal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Pricing - Controle de Datas"
+              "title": "BLB - Extracao Fiscal"
             }
           }
         ]
@@ -26,6 +27,7 @@
       {
         "id": "23097f06d745a614",
         "type": "tabs",
+        "dimension": 37.034574468085104,
         "children": [
           {
             "id": "294a562a62eeeb9e",
@@ -201,18 +203,19 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "294a562a62eeeb9e",
+  "active": "494c8aced6781c3e",
   "lastOpenFiles": [
     "70-Projects, Tools & Integrations/Projects/Pricing - Controle de Datas.md",
     "70-Projects, Tools & Integrations/Projects/Pricing - Controle de Validade - Layout Etiqueta.md",
+    "70-Projects, Tools & Integrations/Projects/Lote de Compra - Geração Automática.md",
+    "70-Projects, Tools & Integrations/Projects/Oracle Auto Reports - Whatsapp Bot.md",
+    "Promoção.md",
     "70-Projects, Tools & Integrations/Projects/Pricing - Controle de Datas.canvas",
     "Pricing - Controle de Validade - Layout Etiqueta.png",
     "index.md",
     "70-Projects, Tools & Integrations/Integrations/Instaleap/Instaleap.md",
-    "70-Projects, Tools & Integrations/Projects/Oracle Auto Reports - Whatsapp Bot.md",
     "70-Projects, Tools & Integrations/Projects/Ecommerce - Replicação por Encarte (MN).md",
     "70-Projects, Tools & Integrations/Projects/Ecommerce - Replicação de Ofertas PDV TOTVS.md",
-    "70-Projects, Tools & Integrations/Projects/Lote de Compra - Geração Automática.md",
     "Whatsapp Bot Form.md",
     "Whatsapp Bot.md",
     "70-Projects, Tools & Integrations/Projects/BLB - Extracao Fiscal.md",
@@ -240,7 +243,6 @@
     "70-Projects, Tools & Integrations/Projects/Tae - Assinatura Eletrônica.md",
     "90-Custom Override/On/Correção de Impostos no Recebimento.canvas",
     "70-Projects, Tools & Integrations/Projects/Tae - Assinatura Eletrônica.canvas",
-    "70-Projects, Tools & Integrations/Tools/Controle de Promoções - Inaugurações.md",
     "70-Projects, Tools & Integrations/Projects/Extração de XMLs.canvas",
     "70-Projects, Tools & Integrations/Tools/Gerador de Pedidos Ecommerce.canvas",
     "70-Projects, Tools & Integrations/Projects/Controle de Selos - Campanha de Selos PDV.canvas",

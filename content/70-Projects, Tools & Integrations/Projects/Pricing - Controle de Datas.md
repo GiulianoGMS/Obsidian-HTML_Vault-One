@@ -55,15 +55,15 @@ SATELITSKY (legado)                         App Gestão de Lojas (DW)
 
 ## Objetos
 
-| Objeto                                    | Tipo      | Origem     | Descrição                                                                                                                                             |
-| ----------------------------------------- | --------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `NAGV_BASE_MRL_PROMOCESPECIAL2`           | View      | SATELITSKY | Lê `PRODUTO_VENCIMENTO@SATELITSKY`; converte EAN → PLU via MAP_PRODCODIGO; filtra vencimento entre hoje e +100 dias, sem recusa, com preço de rebaixa |
-| `NAGV_BASE_MRL_PROMOCESPECIAL_APP`        | View      | App DW     | Lê `NAGV_APP_DATAVALIDADE@CONSINCODW`; exclui Frios e Laticínios; calcula preço com desconto por categoria; apenas lojas habilitadas                  |
-| `NAGV_APURACAO_SELLOUT_VALIDADE`          | View      | ERP        | Apuração de [[Sellout]] durante o período de rebaixa — cruza `MRL_PROMOCESPECIALHIST` com vendas do PDV                                               |
-| `NAGP_REP_CONTROLEDATAS`                  | Procedure | ERP        | MERGE da origem SATELITSKY → `MRL_PROMOCESPECIALHIST`; idempotente pela chave produto + empresa + acesso especial + preço + data fim                  |
-| `NAGP_REP_CONTROLEDATAS_APP`              | Procedure | ERP        | INSERT da origem App DW → `MRL_PROMOCESPECIALHIST`; deduplicação por NOT EXISTS; gera EAN de acesso via `NAG_GERA_EAN13_AUTO`                         |
-| `NAGP_REP_CONTROLEDATAS_APP_PROMOC_AGRUP` | Procedure | ERP        | Frios e Laticínios — gera `MRL_PROMOCAO` + `MRL_PROMOCAOITEM` agrupando todos os itens do dia em uma única promoção por loja (grupo 10 "CDV LJ")      |
-| `NAGP_REP_CONTROLEDATAS_APP_PROMOC`       | Procedure | ERP        | Frios e Laticínios — versão avulsa; gera uma promoção separada por item                                                                               |
+| Objeto                              | Tipo      | Origem     | Descrição                                                                                                                                             |
+| ----------------------------------- | --------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NAGV_BASE_MRL_PROMOCESPECIAL2`     | View      | SATELITSKY | Lê `PRODUTO_VENCIMENTO@SATELITSKY`; converte EAN → PLU via MAP_PRODCODIGO; filtra vencimento entre hoje e +100 dias, sem recusa, com preço de rebaixa |
+| `NAGV_BASE_MRL_PROMOCESPECIAL_APP`  | View      | App DW     | Lê `NAGV_APP_DATAVALIDADE@CONSINCODW`; exclui Frios e Laticínios; calcula preço com desconto por categoria; apenas lojas habilitadas                  |
+| `NAGV_APURACAO_SELLOUT_VALIDADE`    | View      | ERP        | Apuração de [[Sellout]] durante o período de rebaixa — cruza `MRL_PROMOCESPECIALHIST` com vendas do PDV                                               |
+| `NAGP_REP_CONTROLEDATAS`            | Procedure | ERP        | MERGE da origem SATELITSKY → `MRL_PROMOCESPECIALHIST`; idempotente pela chave produto + empresa + acesso especial + preço + data fim                  |
+| `NAGP_REP_CONTROLEDATAS_APP`        | Procedure | ERP        | INSERT da origem App DW → `MRL_PROMOCESPECIALHIST`; deduplicação por NOT EXISTS; gera EAN de acesso via `NAG_GERA_EAN13_AUTO`                         |
+| ..._APP_PROMOC_AGRUP`               | Procedure | ERP        | Frios e Laticínios — gera `MRL_PROMOCAO` + `MRL_PROMOCAOITEM` agrupando todos os itens do dia em uma única promoção por loja (grupo 10 "CDV LJ")      |
+| `NAGP_REP_CONTROLEDATAS_APP_PROMOC` | Procedure | ERP        | Frios e Laticínios — versão avulsa; gera uma promoção separada por item                                                                               |
 
 ---
 
@@ -139,11 +139,11 @@ A emissão é controlada pela view `MRLV_PROMOCAOESPECIAL`, que divide a quantid
 
 ## Relatórios e Consultas
 
-| Arquivo | Finalidade |
-|---------|-----------|
-| `Pre_Ext Data Validade.sql` | Extração detalhada de itens em rebaixa — filtro por [[Fornecedor]], [[Comprador]], status, período de vencimento |
-| `Pre_Ext Validade Agrupados.sql` | Agrupado por mês/[[Fornecedor]] — usado para análise de volume |
-| `Pre_Sellout Data Validade.sql` | Apuração de [[Sellout]] — cruza vendas do [[PDV]] com promoções ativas para medir resultado da rebaixa |
+| Arquivo                          | Finalidade                                                                                                       |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `Pre_Ext Data Validade.sql`      | Extração detalhada de itens em rebaixa — filtro por [[Fornecedor]], [[Comprador]], status, período de vencimento |
+| `Pre_Ext Validade Agrupados.sql` | Agrupado por mês/[[Fornecedor]] — usado para análise de volume                                                   |
+| `Pre_Sellout Data Validade.sql`  | Apuração de [[Sellout]] — cruza vendas do [[PDV]] com promoções ativas para medir resultado da rebaixa           |
 
 ---
 

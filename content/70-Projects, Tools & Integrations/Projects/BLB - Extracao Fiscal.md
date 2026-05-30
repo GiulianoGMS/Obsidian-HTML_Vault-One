@@ -1,8 +1,10 @@
 ﻿---
 Language:
   - "[[SQL]]"
+  - "[[Python]]"
 Repository:
   - "[[BLB]]"
+  - "[[GMS-Corp/Python]]"
 Squads:
   - "[[Fiscal]]"
 System:
@@ -151,3 +153,35 @@ END;
 ```
 
 > Cupons [[SAT]] são extraídos separadamente via `NAGP_BLB_EXT_CUPONS_SAT` (sem loop por empresa).
+
+---
+
+## Pós-Processamento — Organização por Pasta
+
+[Repositório: GMS-Corp/Python → Cria pasta e move arq.py](https://github.com/GMS-Corp/Python/blob/main/Cria%20pasta%20e%20move%20arq.py)
+
+As procedures Oracle depositam saídas e entradas no **mesmo diretório** (`EXT_SAT_LOJA_{NNN}`). O consumidor dos arquivos requer que cada tipo esteja em pastas separadas. O script Python faz essa reorganização automaticamente:
+
+### Lógica
+
+```
+\\[diretorio]\sat_store_{N}\        ← pasta de origem (uma por loja)
+        ├── Ext_BLB_SAIDAS_...csv   → move para saidas_store_{N}\
+        └── Ext_BLB_ENTRADAS_...csv → move para ent_store_{N}\
+```
+
+1. Descobre todas as pastas `sat_store_*` no diretório base
+2. Para cada loja N, cria (se não existir) `ent_store_{N}` e `saidas_store_{N}`
+3. Move arquivos da pasta de origem:
+   - Nome contém `SAIDA` → `saidas_store_{N}`
+   - Demais → `ent_store_{N}`
+4. Passo de correção: varre `ent_store_{N}` e move para `saidas_store_{N}` qualquer arquivo com `SAIDA` no nome que tenha sido depositado errado em execuções anteriores
+
+### Execução
+
+```python
+base_path = r"\\[diretorio]"   # caminho da rede com as pastas sat_store_*
+# rodar: python "Cria pasta e move arq.py"
+```
+
+Não tem parâmetros — basta ajustar `base_path` e executar. Pode ser agendado após a extração Oracle ou rodado manualmente.
